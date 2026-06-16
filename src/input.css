@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components{
+  .skill-card{
+    @apply text-center
+    border
+    dark:border-gray-700
+    rounded-2xl
+    p-6
+    hover:-translate-y-2
+    transition
+    duration-300
+  }
+
+  .project-card{
+    @apply overflow-hidden
+    rounded-2xl
+    border
+    dark:border-gray-700
+    shadow-sm
+    hover:-translate-y-2
+    transition
+    duration-300
+  }
+
+  .tag{
+    @apply px-3
+    py-1
+    text-sm
+    rounded-full
+    border
+  }
+
+  .btn-primary{
+    @apply inline-flex
+    items-center
+    justify-center
+    px-6
+    py-3
+    rounded-lg
+    font-medium
+    bg-black
+    text-white
+    hover:-translate-y-1
+    hover:shadow-lg
+    transition-all
+    duration-300
+    dark:bg-white
+    dark:text-black;
+  }
+
+  .btn-secondary{
+    @apply inline-flex
+    items-center
+    justify-center
+    px-6
+    py-3
+    rounded-lg
+    font-medium
+    border
+    border-gray-300
+    hover:-translate-y-1
+    hover:shadow-lg
+    transition-all
+    duration-300
+    dark:border-gray-700
+    dark:hover:bg-gray-800;
+  }
+}
